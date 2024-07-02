@@ -15,3 +15,15 @@ def provincia (request):
 
 def servicios (request):
     return render(request, "core/pages/servicios.html")
+
+def login (request):
+    return render(request, "core/pages/login.html")
+
+def registro (request):
+    return render(request, "core/pages/registro.html")
+
+def perfildeusuario (request):
+    return render(request, "core/pages/perfil-de-usuario.html")
+
+def editarusuario (request):
+    return render(request, "core/pages/editar-usuario.html")
