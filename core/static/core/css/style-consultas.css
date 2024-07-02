@@ -1,0 +1,198 @@
+body {
+	color: #00425a;
+}
+
+/* consultas.html - main*/
+form.queriesForm {
+	font-family: 'Poppins', sans-serif;
+	max-width: 70%;
+	margin: 1rem auto;
+	padding: 1rem auto;
+	background: #eff5f5;
+	border-radius: 0.5rem;
+	accent-color: #1f8a70;
+}
+
+#formTitle {
+	margin: 0 0 2rem 0;
+	text-align: center;
+}
+
+form.queriesForm fieldset {
+	padding: 1rem;
+}
+
+form.queriesForm label {
+	margin-top: 1rem;
+}
+
+form.queriesForm input[type='text'],
+form.queriesForm input[type='email'],
+form.queriesForm input[type='tel'],
+form.queriesForm input[type='date'],
+form.queriesForm input[type='file'],
+form.queriesForm textarea,
+form.queriesForm select {
+	border: 1px solid #181823;
+	border-radius: 5px;
+	font-size: 16px;
+	height: auto;
+	margin: 1rem auto;
+	padding: 1rem;
+	width: 95%;
+	background-color: #eff5f5;
+	color: #181823;
+	box-shadow: #181823 inset;
+}
+
+form.queriesForm input[type='radio'] {
+	margin: 0 4px 8px 16px;
+}
+
+form.queriesForm select {
+	padding: 6px;
+	height: 32px;
+	border-radius: 2px;
+}
+
+form.queriesForm button[type='submit'] {
+	padding: 19px 39px 18px 39px;
+	color: #eff5f5;
+	background-color: #1f8a70;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 100%;
+	border: 1px solid #00425a;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 #181823 inset;
+	margin-bottom: 10px;
+}
+
+form.queriesForm button[type='reset'] {
+	padding: 19px 39px 18px 39px;
+	color: #eff5f5;
+	background-color: #aaaaaa;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 100%;
+	border: 1px solid #00425a;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 #181823 inset;
+	margin-bottom: 10px;
+}
+
+form.queriesForm fieldset {
+	margin-bottom: 30px;
+	border: double;
+}
+
+form.queriesForm label {
+	display: block;
+	margin-bottom: 8px;
+	margin-left: 1rem;
+}
+
+form.queriesForm input[type='radio'] + label {
+	font-weight: 300;
+	display: inline-block;
+	margin-left: 4px;
+}
+
+form.queriesForm input:focus {
+	background-color: rgb(210, 215, 250);
+}
+
+/*Diseño responsivo*/
+@media screen and (min-width: 320px) {
+	form.queriesForm {
+		max-width: 320px;
+	}
+
+	form.queriesForm input[type='text'],
+	form.queriesForm input[type='email'],
+	form.queriesForm input[type='tel'],
+	form.queriesForm input[type='date'],
+	form.queriesForm input[type='file'],
+	form.queriesForm textarea,
+	form.queriesForm select {
+		margin: 0 0.5rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	form.queriesForm {
+		max-width: 768px;
+	}
+}
+
+form.queriesForm input[type='date'] {
+	margin-left: 3px;
+}
+
+.groupRadio {
+	padding-bottom: 3%;
+}
+
+.groupFormContact-btn-send {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formMessContact-exito {
+	font-size: 16px;
+	color: #119200;
+	display: none;
+}
+
+.formMessContact-active {
+	display: block;
+}
+
+.formInputContact-error {
+	font-size: 0.8rem;
+	padding-left: 3%;
+	display: none;
+	color: rgb(184, 31, 31);
+	font-weight: bold;
+}
+
+.formInputContact-error-active {
+	display: block;
+}
+
+.groupInputContact {
+	position: relative;
+}
+
+.groupFormContact-ok .formValidateContact {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.groupFormContact-wrong .formValidateContact {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.groupFormContact-ok .dateValidateContact {
+	color: rgb(30, 209, 45);
+	opacity: 1;
+}
+
+.groupFormContact-wrong .dateValidateContact {
+	color: rgb(187, 41, 41);
+	opacity: 1;
+}
+
+.inputError-active {
+	box-shadow: 2px 0px 10px rgb(187, 41, 41);
+}
+
+.inputError-inactive {
+	box-shadow: 2px 0px 10px rgb(30, 209, 45);
+}

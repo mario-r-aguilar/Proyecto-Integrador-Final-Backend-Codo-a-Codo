@@ -1,0 +1,121 @@
+{% extends "core/base/base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet"
+          href="{% static 'core/css/style-quienesSomos.css' %}" />
+{% endblock style %}
+{% block title %}
+    CHARLY Tours | Agencia de viajes | Quienes somos
+{% endblock title %}
+{% block content %}
+    <h1 class="page-title">Nuestra Historia</h1>
+    <div class="agency-container">
+        <section class="agency-history-container">
+            <article class="card-history">
+                <h3 class="card-history-title">Comienzos</h3>
+                <p class="card-history-content">
+                    <span class="testimonials-bold-brands">CHARLY Tours</span>
+                    nació de la pasión por los viajes de su creador, Carlos
+                    "Charly" Ramírez. En 2005, decidió convertir su amor por
+                    explorar Argentina, en una empresa que pudiera brindar
+                    experiencias únicas a otros viajeros.
+                </p>
+            </article>
+            <article class="card-history">
+                <h3 class="card-history-title">Sueños y Logros</h3>
+                <p class="card-history-content">
+                    Desde su inicio,
+                    <span class="testimonials-bold-brands">CHARLY Tours</span>
+                    se propuso el objetivo de ofrecer servicios de viajes de
+                    alta calidad, personalizados y memorables. A lo largo de
+                    los años, hemos logrado convertirnos en una agencia
+                    reconocida por los siguientes premios:
+                </p>
+                <ol class="card-history-list">
+                    <li class="card-history-list-item">Premio a la Excelencia en Turismo</li>
+                    <li class="card-history-list-item">Reconocimiento como Mejor Agencia de Viajes Responsable</li>
+                    <li class="card-history-list-item">Socio Oficial de Turismo de Argentina</li>
+                    <li class="card-history-list-item">Premio a la Innovación en Turismo</li>
+                </ol>
+            </article>
+            <article class="card-history">
+                <h3 class="card-history-title">Satisfacción del Cliente</h3>
+                <p class="card-history-content">
+                    La satisfacción de nuestros clientes es nuestra prioridad
+                    número uno. A lo largo de nuestra historia, hemos tenido el
+                    privilegio de acompañar a miles de viajeros en sus
+                    aventuras alrededor del mundo, creando recuerdos
+                    inolvidables y experiencias que perduran para toda la vida.
+                </p>
+            </article>
+        </section>
+        <section class="agency-images-container">
+            <div class="agency-images-photos">
+                <img src="{% static 'core/media/images/quienesSomos1.jpg' %}"
+                     alt="Fotografías de paisajes capturadas por nuestro fundador" />
+            </div>
+            <div class="agency-images-photos">
+                <img src="{% static 'core/media/images/quienesSomos2.jpg' %}"
+                     alt="Fotografías de paisajes capturadas por nuestro fundador" />
+            </div>
+            <div class="agency-images-photos">
+                <img src="{% static 'core/media/images/quienesSomos3.jpg' %}"
+                     alt="Fotografías de paisajes capturadas por nuestro fundador" />
+            </div>
+        </section>
+    </div>
+    <h2 class="testimonials-sub-title">Testimonios de nuestros clientes</h2>
+    <section class="testimonials-container">
+        <div class="testimonials-card">
+            <div class="testimonials-card-image">
+                <img src="{% static 'core/media/images/testimonio1.jpeg' %}"
+                     alt="Martín González" />
+            </div>
+            <h5 class="testimonials-card-title">Martín González - Córdoba, Argentina</h5>
+            <p class="testimonials-card-content">
+                "Mi familia y yo tuvimos la oportunidad de viajar con
+                <span class="testimonials-bold-brands">CHARLY Tours</span>
+                a las Cataratas del Iguazú y fue una experiencia inolvidable.
+                La organización del viaje, los guías locales y la atención
+                recibida fueron excepcionales. Recomiendo
+                <span class="testimonials-bold-brands">CHARLY Tours</span> a
+                todos los argentinos que quieran descubrir la belleza de
+                nuestro país de una manera única y especial."
+            </p>
+        </div>
+        <div class="testimonials-card">
+            <div class="testimonials-card-image">
+                <img src="{% static 'core/media/images/testimonio2.jpeg' %}"
+                     alt="Laura Lopez" />
+            </div>
+            <h5 class="testimonials-card-title">Laura Lopez - Buenos Aires, Argentina</h5>
+            <p class="testimonials-card-content">
+                "<span class="testimonials-bold-brands">CHARLY Tours</span>
+                nos llevó en un viaje increíble por la Ruta de los Siete Lagos
+                en la Patagonia argentina. Fue un viaje mágico, lleno de
+                paisajes impresionantes y momentos inolvidables. Los
+                recomendaría a cualquier argentino que quiera explorar la
+                naturaleza y la cultura de nuestra tierra de una manera
+                auténtica y emocionante."
+            </p>
+        </div>
+        <div class="testimonials-card">
+            <div class="testimonials-card-image">
+                <img src="{% static 'core/media/images/testimonio3.jpeg' %}"
+                     alt="Juan Pérez" />
+            </div>
+            <h5 class="testimonials-card-title">Juan Pérez - Mendoza, Argentina</h5>
+            <p class="testimonials-card-content">
+                "Gracias a
+                <span class="testimonials-bold-brands">CHARLY Tours</span>,
+                pude realizar un sueño y hacer trekking en el Glaciar Perito
+                Moreno en la provincia de Santa Cruz. Fue una experiencia
+                única en la vida, y todo fue perfectamente organizado.
+                Recomiendo
+                <span class="testimonials-bold-brands">CHARLY Tours</span> a
+                todos los argentinos que quieran vivir aventuras emocionantes
+                y descubrir la belleza natural de nuestro país."
+            </p>
+        </div>
+    </section>
+{% endblock content %}

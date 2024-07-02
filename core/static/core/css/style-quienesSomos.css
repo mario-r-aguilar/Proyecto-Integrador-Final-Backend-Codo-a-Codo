@@ -1,0 +1,138 @@
+main {
+	margin: 1rem 2rem 1rem 1rem;
+	width: 100%;
+	height: auto;
+}
+
+.page-title {
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.agency-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+}
+
+.history-sub-title,
+.testimonials-sub-title {
+	margin-bottom: 1rem;
+}
+
+.agency-history-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+}
+
+.card-history-title {
+	margin-bottom: 1rem;
+}
+
+.card-history-content {
+	text-align: justify;
+	margin-bottom: 1rem;
+}
+
+.card-history-list-item {
+	color: rgb(15, 107, 212);
+	font-weight: 400;
+	text-shadow: 1px 1px 1px black;
+}
+
+.testimonials-sub-title {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.testimonials-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.testimonials-card {
+	text-align: justify;
+	width: 30%;
+	height: auto;
+	background-color: rgba(240, 217, 188, 0.548);
+	padding: 1.5rem 1rem;
+	border-radius: 8px;
+	margin: 0 auto;
+}
+
+.testimonials-card-image {
+	text-align: center;
+}
+
+.testimonials-card-image img {
+	width: 65%;
+	height: 75%;
+	border-radius: 8px;
+}
+
+.testimonials-card-title {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	font-weight: bolder;
+}
+
+.testimonials-bold-brands {
+	font-weight: bold;
+}
+
+.testimonials-card-content {
+	font-style: italic;
+}
+
+.agency-images-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+}
+
+.agency-images-photos {
+	margin-left: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+.agency-images-photos img {
+	text-align: center;
+	width: 50%;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0);
+	border-radius: 8px;
+}
+
+@media screen and (max-width: 900px) {
+	.agency-images-container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.testimonials-container {
+		display: block;
+	}
+	.testimonials-card {
+		margin-bottom: 1rem;
+		width: 70%;
+	}
+
+	.agency-history-container {
+		width: 70%;
+	}
+}

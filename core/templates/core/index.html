@@ -1,0 +1,30 @@
+{% extends "core/base/base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'core/css/style-whatsapp.css' %}" />
+{% endblock style %}
+{% block title %}
+    CHARLY Tours | Agencia de viajes | Inicio
+{% endblock title %}
+{% block content %}
+    <div class="avion"></div>
+    <h1 id="slogan">
+        Descubre la magia de Argentina con nosotros. Una experiencia
+        inolvidable en cada provincia, guiada por la calidez y la aventura.
+        Viajamos Codo a Codo con vos...
+    </h1>
+    <div class="grid-container" id="grid-provincias">
+        <!-- Aquí se renderiza el listado de las provincias que se obtiene desde script.js-->
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=541155555555&text=Hola,%20me%20gustaría%20obtener%20más%20información."
+       class="floatWhat"
+       target="_blank">
+        <i class="fa-brands fa-whatsapp my-floatWhat"></i>
+    </a>
+    {% block script %}
+        <!-- render lista de provincias -->
+        <script src="{% static 'core/js/provincia.js' %}"></script>
+        <!-- formulario de registro - Cambiar funcionamiento -->
+        {% comment %} <script src="{% static 'core/js/scriptForm.js %}"></script> {% endcomment %}
+    {% endblock script %}
+{% endblock content %}

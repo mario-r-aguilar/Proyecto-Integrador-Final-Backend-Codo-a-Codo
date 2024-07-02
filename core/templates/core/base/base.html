@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Grupo 10" />
+        <meta name="description" content="CHARLY Tours" />
+        <meta name="keywords" content="CHARLY Tours, turismo, agencia de viajes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link rel="icon"
+              href="{% static 'core/media/images/icono.png' %}"
+              type="image/x-icon" />
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+              crossorigin="anonymous" />
+        <!-- font-awesome -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <!-- hojas de estilos propias -->
+        <link rel="stylesheet" href="{% static 'core/css/style.css' %}" />
+        {% block style %}
+        {% endblock style %}
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+    </head>
+    {% if request.path == 'servicios' %}
+        <body onload="getWeather()">
+        {% else %}
+            <body>
+            {% endif %}
+            <body>
+                <header>
+                    <section class="titleBar">
+                        <div class="logo">
+                            <a href="{% url 'inicio' %}">
+                                <img src="{% static 'core/media/images/logo.png' %}"
+                                     alt="Logo de la página web" />
+                            </a>
+                        </div>
+                        <h1 class="title">CHARLY Tours</h1>
+                    </section>
+                    <!--navbar-->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbar-toggler"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar-toggler">
+                                <!-- links a páginas -->
+                                <ul class="navbar-nav d-flex justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'consultas' %}">Dejanos tu consulta</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'quienessomos' %}">Quienes somos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contacto">Contacto</a>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-dark" id="login" type="button">Iniciar sesión</button>
+                                <button class="btn btn-dark" id="register" type="button">Registrarse</button>
+                                <!-- Aqui se renderizará un saludo personalizado al usuario luego del registro-->
+                                <h5 id="saludarUsuario"></h5>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <main>
+                    {% block content %}
+                    {% endblock content %}
+                </main>
+                <footer>
+                    <div>
+                        <h4 id="conocenos">Redes sociales</h4>
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-instagram"></i>
+                                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href="https://facebook.com" target="_blank">Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Casa Central</h4>
+                        <iframe class="googleMap"
+                                title="ubicacion"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3605690550685!2d-58.384086924215154!3d-34.59504279725591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca83bebe54bb%3A0x1ef9d769e184f2d5!2sSecretar%C3%ADa%20de%20Tur%C3%ADsmo%20de%20la%20Naci%C3%B3n!5e0!3m2!1ses-419!2sar!4v1711275378178!5m2!1ses-419!2sar"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div>
+                        <h4 id="contacto">Contacto</h4>
+                        <ul>
+                            <li>
+                                <i class="fab fa-whatsapp"></i> 11-5555-5555
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i> 11-4555-5555
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+                {% block script %}
+                {% endblock script %}
+                <!-- bootstrap -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                        crossorigin="anonymous"></script>
+            </body>
+        </html>

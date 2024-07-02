@@ -1,0 +1,21 @@
+{% extends "core/base/base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'core/css/style-provincia.css' %}" />
+{% endblock style %}
+{% block title %}
+    CHARLY Tours | Agencia de viajes | Provincia Elegida
+{% endblock title %}
+{% block content %}
+    <section id="provinceDetail" class="provinceDetail">
+        <!-- Acá se muestran los detalles de la provincia seleccionada -->
+    </section>
+    <section class="buttonsBack-Up">
+        <a class="button-volver" href="../index.html">🢀 Ir a Inicio</a>
+        <a class="button-volver buttonUp" href="#arriba">🢁 Ir Arriba</a>
+    </section>
+    {% block script %}
+        <!-- render provincia seleccionada -->
+        <script src="{% static 'core/js/provincia.js' %}"></script>
+    {% endblock script %}
+{% endblock content %}

@@ -1,0 +1,76 @@
+h2 {
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.seleccion {
+	margin-top: 1rem;
+	font-size: 1.1rem;
+	margin-left: 1.1rem;
+}
+
+.selector1 {
+	width: 10rem;
+	margin-right: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.selector2 {
+	width: 6.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.button {
+	border-radius: 8px;
+	background-color: #113f74;
+	color: white;
+	margin-top: 1rem;
+	padding: 0.3rem;
+	width: 6.5rem;
+}
+
+#cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.card {
+	width: 19rem;
+	border-radius: 1rem;
+	padding: 1rem;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+	margin-bottom: 2.5rem;
+	background-color: rgb(255, 255, 255);
+}
+
+.card:hover {
+	background-color: rgb(24, 214, 189);
+	color: #ffffff;
+	scale: 1.1;
+	transition: scale 1s;
+}
+
+.card h3 {
+	font-size: 1.8rem;
+	margin-top: 0%;
+	text-align: center;
+}
+
+.card .fecha {
+	font-size: 1.3rem;
+}
+
+.card .temp-img {
+	width: 4rem;
+}
+
+footer {
+	margin-top: 5rem;
+}

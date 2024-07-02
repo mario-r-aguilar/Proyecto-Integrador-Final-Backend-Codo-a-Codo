@@ -1,0 +1,123 @@
+/*provincia.html - main*/
+
+.buttonsBack-Up {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 2rem;
+}
+
+.buttonsBack-Up .button-volver,
+.buttonsBack-Up .buttonUp,
+.provinceDetail .provinciaSelectedContainer .activity .btn-activityPrice {
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	background-color: #0078d7;
+	text-align: center;
+	width: 10rem;
+	font-size: 18px;
+	text-decoration: none;
+	color: white;
+	margin: 1rem;
+}
+
+.provinceDetail .provinciaSelectedContainer .activity .btn-activityPrice {
+	background-color: #000000af;
+}
+
+.provinceDetail {
+	background-color: hsl(205, 45%, 50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+}
+
+.provinceDetail .provinciaSelectedContainer {
+	background-color: hsl(205, 45%, 50%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem;
+	margin: 1rem auto;
+	width: 100%;
+	max-width: 1200px;
+	height: 75%;
+}
+
+.provinceDetail .provinciaSelectedContainer .provinciaSelectedName {
+	color: rgb(255, 240, 220);
+	text-shadow: 3px 1px 3px rgb(0, 0, 0);
+	background-color: #02508f;
+	padding: 0.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 1rem;
+}
+
+.provinceDetail .provinciaSelectedContainer .activity {
+	text-align: center;
+	width: 95%;
+	height: auto;
+	margin: 0.5rem auto;
+	padding: 1rem;
+	background-color: #f0f0f0;
+	border: black 1px solid;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.provinceDetail .provinciaSelectedContainer .activity .activityImage {
+	width: 100%;
+	height: auto;
+	margin: 0.2rem auto;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.provinceDetail .provinciaSelectedContainer .activity .activityDescription {
+	text-align: justify;
+	height: 30%;
+	margin: 1rem auto;
+}
+
+.provinceDetail .provinciaSelectedContainer .activity .activityTitle {
+	height: 30%;
+	margin: 1rem;
+}
+
+#card-totalActivityPrice {
+	background-color: hsl(205, 45%, 50%);
+	border: 1px hsl(205, 45%, 50%) solid;
+	box-shadow: 0 0 5px hsl(205, 45%, 50%);
+}
+
+@media all and (min-width: 500px) {
+	.provinceDetail .provinciaSelectedContainer .activity {
+		width: 75%;
+	}
+}
+
+@media all and (min-width: 767px) {
+	.provinceDetail .provinciaSelectedContainer .activity {
+		width: 70%;
+	}
+}
+
+@media all and (min-width: 900px) {
+	.provinceDetail .provinciaSelectedContainer .activity {
+		width: 65%;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.provinceDetail .provinciaSelectedContainer .activity {
+		width: 60%;
+	}
+}
