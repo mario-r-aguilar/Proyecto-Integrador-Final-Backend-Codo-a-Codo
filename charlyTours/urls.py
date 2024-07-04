@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from core import views
 
 urlpatterns = [
@@ -26,3 +27,7 @@ urlpatterns = [
     path('provincia/', views.provincia, name="provincia"),
     path('servicios/', views.servicios, name="servicios"),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
