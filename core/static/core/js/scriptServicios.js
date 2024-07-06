@@ -158,8 +158,7 @@ async function getWeatherForecast() {
 			);
 			let description = dailyTemperatures[dateKey].description;
 			// Convertir la primera letra a mayúscula
-			description =
-				description.charAt(0).toUpperCase() + description.slice(1);
+			description = description.charAt(0).toUpperCase() + description.slice(1);
 			const weatherIcon = dailyTemperatures[dateKey].weatherIcon;
 
 			// Agregar los resultados al contenedor HTML
@@ -169,8 +168,8 @@ async function getWeatherForecast() {
                 <p class="fecha">${formattedDate}</p>
                 <div class="weather-info">
                     <p class="temp">Temp promedio ${toCelsius(
-								averageTemperature
-							)}°C ${description}</p>
+											averageTemperature
+										)}°C ${description}</p>
                     <img src="http://openweathermap.org/img/wn/${weatherIcon}.png" alt="${description}" class="temp-img">
                     <p class="temp">Temp: ${minTemperature}°C - ${maxTemperature}°C
                 </div>
