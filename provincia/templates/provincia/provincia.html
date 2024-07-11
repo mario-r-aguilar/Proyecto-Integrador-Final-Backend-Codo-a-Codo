@@ -1,0 +1,66 @@
+{% extends "core/base/base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'core/css/style-provincia.css' %}" />
+{% endblock style %}
+{% block title %}
+    CHARLY Tours | Agencia de viajes | Provincia Elegida
+{% endblock title %}
+{% block content %}
+    <section id="provinceDetail" class="provinceDetail">
+        <!-- Acá se muestran los detalles de la provincia seleccionada -->
+         <div class="provinciaSelectedContainer">
+            <h2 class="provinciaSelectedName">{{provinces.name}}</h2>
+            <div class="activity">
+              <h3 class="activityTitle">{{provinces.description_one}}</h3>
+              <div>
+              <img class="activityImage" src="{{provinces.image_one.url}}" alt="{{provinces.description_one}}">
+              </div>
+              <p class="activityDescription">{{provinces.detail_one}}</p>
+              <div>
+            <button class="btn-activityPrice">Valor: {{provinces.price_one}} USD</button>
+            </div>
+            </div>
+        
+            <div class="activity">
+              <h3 class="activityTitle">{{provinces.description_two}}</h3>
+              <div>
+              <img class="activityImage" src="{{provinces.image_two.url}}" alt="{{provinces.description_two}}">
+              </div>
+              <p class="activityDescription">{{provinces.detail_two}}</p>
+              <div>
+            <button class="btn-activityPrice">Valor: {{provinces.price_two}} USD</button>
+            </div>
+            </div>
+        
+            <div class="activity">
+              <h3 class="activityTitle">{{provinces.description_three}}</h3>
+              <div>
+              <img class="activityImage" src="{{provinces.image_three.url}}" alt="{{provinces.description_three}}">
+              </div>
+              <p class="activityDescription">{{provinces.detail_three}}</p>
+              <div>
+            <button class="btn-activityPrice">Valor: {{provinces.price_three}} USD</button>
+            </div>
+            </div>
+        
+            <div class="activity">
+              <h3 class="activityTitle">{{provinces.description_four}}</h3>
+              <div>
+              <img class="activityImage" src="{{provinces.image_four.url}}" alt="{{provinces.description_four}}">
+              </div>
+              <p class="activityDescription">{{provinces.detail_four}}</p>
+              <div>
+            <button class="btn-activityPrice">Valor: {{provinces.price_four}} USD</button>
+            </div>
+            </div>
+            <div id="card-totalActivityPrice" class="activity">
+                <a href="{% url 'consultas' %}" class="btn-activityPrice">Consultanos por descuentos en paquetes</a>
+            </div>
+         </div>
+    </section>
+    <section class="buttonsBack-Up">
+        <a class="button-volver" href="{% url 'inicio' %}">🢀 Ir a Inicio</a>
+        <a class="button-volver buttonUp" href="#arriba">🢁 Ir Arriba</a>
+    </section>
+{% endblock content %}

@@ -30,3 +30,8 @@ function mostrarDetallesProvincia(provincia) {
 	//Redireccionar a otra página para mostrar los detalles
 	window.location.href = `pages/provincia.html?id=${provincia.id}`;
 }
+
+function mostrarDetallesProvincia(provincia_id) {
+	//Redireccionar a otra página para mostrar los detalles
+	window.location.href = `pages/provincia.html?id=${provincia_id}`;
+}

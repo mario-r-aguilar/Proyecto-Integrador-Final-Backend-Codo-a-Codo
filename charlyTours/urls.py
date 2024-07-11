@@ -17,15 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-from core import views
+from core import views as core_views
+from provincia import views as provincia_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.inicio, name="inicio"),
-    path('consultas/', views.consultas, name="consultas"),
-    path('quienessomos/', views.quienessomos, name="quienessomos"),
-    path('provincia/', views.provincia, name="provincia"),
-    path('servicios/', views.servicios, name="servicios"),
+    path('', provincia_views.inicio, name="inicio"),
+    path('consultas/', core_views.consultas, name="consultas"),
+    path('quienessomos/', core_views.quienessomos, name="quienessomos"),
+    path('provincia/<int:id>', provincia_views.provincia, name="provincia"),
+    path('servicios/', core_views.servicios, name="servicios"),
 ]
 
 if settings.DEBUG:
