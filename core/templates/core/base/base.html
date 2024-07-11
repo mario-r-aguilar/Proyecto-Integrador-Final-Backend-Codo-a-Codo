@@ -31,8 +31,13 @@
     {% if request.path == '/servicios/' %}
         <body onload="getWeather()">
         {% else %}
-            <body>
+            {% if '/provincia/' in request.path %}
+                <body>
+                <a id="arriba"></a>
+                {% else %}
+                    <body>
             {% endif %}
+    {% endif %}
             <header>
                 <section class="titleBar">
                     <div class="logo">

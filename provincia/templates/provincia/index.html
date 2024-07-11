@@ -14,15 +14,20 @@
         Viajamos Codo a Codo con vos...
     </h1>
     <div class="grid-container" id="grid-provincias">
-        <!-- Aquí se renderiza el listado de las provincias que se obtiene desde script.js-->
+        <!-- Aquí se renderiza el listado de las provincias-->
+        {% for activitie in activities %}
+            <div class="grid-item">
+                <h4>{{activitie.name}}</h4>
+                <a href="{% url 'provincia' activitie.id %}">
+                    <img src="{{ activitie.province_image.url }}" alt="{{activitie.name}}" >
+                </a>
+            </div>
+        {% endfor %}
     </div>
     <a href="https://api.whatsapp.com/send?phone=541155555555&text=Hola,%20me%20gustaría%20obtener%20más%20información."
        class="floatWhat"
        target="_blank">
         <i class="fa-brands fa-whatsapp my-floatWhat"></i>
     </a>
-    {% block script %}
-        <!-- render lista de provincias -->
-        <script src="{% static 'core/js/script.js' %}"></script>
-    {% endblock script %}
+
 {% endblock content %}

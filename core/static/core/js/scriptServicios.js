@@ -158,7 +158,8 @@ async function getWeatherForecast() {
 			);
 			let description = dailyTemperatures[dateKey].description;
 			// Convertir la primera letra a mayúscula
-			description = description.charAt(0).toUpperCase() + description.slice(1);
+			description =
+				description.charAt(0).toUpperCase() + description.slice(1);
 			const weatherIcon = dailyTemperatures[dateKey].weatherIcon;
 
 			// Agregar los resultados al contenedor HTML
