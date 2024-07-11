@@ -169,8 +169,8 @@ async function getWeatherForecast() {
                 <p class="fecha">${formattedDate}</p>
                 <div class="weather-info">
                     <p class="temp">Temp promedio ${toCelsius(
-								averageTemperature
-							)}°C ${description}</p>
+											averageTemperature
+										)}°C ${description}</p>
                     <img src="http://openweathermap.org/img/wn/${weatherIcon}.png" alt="${description}" class="temp-img">
                     <p class="temp">Temp: ${minTemperature}°C - ${maxTemperature}°C
                 </div>
